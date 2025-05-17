@@ -4,46 +4,75 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Baixe agora o eBook e aprenda como aplicar IA em qualquer profissão digital." />
-  <title>eBook - Trabalhe Online com IA</title>
+  <title>Como Exercer Qualquer Profissão Online com IA</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    /* Reset básico */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      margin: 0;
       font-family: 'Inter', sans-serif;
       background: #f8f9fa;
       color: #333;
+      line-height: 1.6;
     }
+
     header {
       background: #fff;
       padding: 1rem 2rem;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
+
     header h1 {
-      margin: 0;
       font-size: 1.5rem;
     }
+
     nav {
       margin-top: 0.5rem;
     }
+
     nav a {
       margin-right: 1rem;
       text-decoration: none;
       color: #007bff;
+      font-weight: 600;
     }
-    .hero {
-      text-align: center;
+
+    /* Seção principal com imagem e texto lado a lado */
+    .hero-flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
       padding: 4rem 2rem;
       background: #e9ecef;
     }
-    .hero h2 {
+
+    .hero-flex img {
+      max-width: 100%;
+      width: 350px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .hero-flex .hero-text {
+      max-width: 500px;
+    }
+
+    .hero-flex .hero-text h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
     }
-    .hero p {
+
+    .hero-flex .hero-text p {
       font-size: 1.1rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
-    .hero a {
+
+    .hero-flex .hero-text a {
+      display: inline-block;
       background: #28a745;
       color: white;
       padding: 1rem 2rem;
@@ -51,14 +80,31 @@
       font-weight: bold;
       border-radius: 8px;
     }
+
+    /* Conteúdo adicional */
     .content {
       padding: 2rem;
       max-width: 800px;
       margin: 0 auto;
     }
+
     .content h3 {
       margin-top: 2rem;
+      font-size: 1.5rem;
+      color: #111;
     }
+
+    .content ul {
+      margin-top: 1rem;
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
+
+    .content ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Footer */
     footer {
       background: #f1f1f1;
       text-align: center;
@@ -66,6 +112,7 @@
       margin-top: 3rem;
       font-size: 0.9rem;
     }
+
     footer a {
       margin: 0 0.5rem;
       color: #555;
@@ -74,31 +121,27 @@
   </style>
 </head>
 <body>
-<div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 2rem; padding: 2rem;">
-  <img src="f0bc989c-379e-40ee-8a51-484d17cec72b.jpg" alt="Capa do ebook" style="max-width: 100%; width: 400px; height: auto; border-radius: 8px;" />
 
-  <div style="max-width: 500px;">
-    <h1>Como Exercer Qualquer Profissão Online com IA</h1>
-    <p>Descubra como utilizar a inteligência artificial para transformar sua carreira digital e atuar de forma independente, de onde estiver.</p>
-    <a href="https://seulinkdepagamento.com" style="display: inline-block; padding: 1rem 2rem; background-color: #007bff; color: white; border-radius: 8px; text-decoration: none; font-weight: bold;">
-      Comprar agora
-    </a>
-  </div>
-</div>
   <header>
     <h1>Canto do Design</h1>
     <nav>
-      <a href="#sobre">Sobre</a>
-      <a href="#">Política de Privacidade</a>
-      <a href="#">Termos de Uso</a>
-      <a href="#">Contato</a>
+      <a href="index.html">Início</a>
+      <a href="privacidade.html">Política de Privacidade</a>
+      <a href="termos.html">Termos de Uso</a>
+      <a href="contato.html">Contato</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>Descubra como usar a Inteligência Artificial para Trabalhar Online</h2>
-    <p>Baixe agora o eBook e aprenda como aplicar IA em qualquer profissão digital.</p>
-    <a href="https://pag.ae/7_EP_Fr-s" target="_blank">Comprar eBook</a>
+  <section class="hero-flex">
+    <img src="f0bc989c-379e-40ee-8a51-484d17cec72b.jpg"
+         alt="Capa do eBook Como Exercer Qualquer Profissão Online com IA">
+
+    <div class="hero-text">
+      <h2>Como Exercer Qualquer Profissão Online com IA</h2>
+      <p>Descubra como utilizar a inteligência artificial para transformar sua carreira digital
+         e atuar de forma independente, de onde estiver.</p>
+      <a href="https://pag.ae/7_EP_Fr-s" target="_blank">Comprar Agora</a>
+    </div>
   </section>
 
   <section class="content">
@@ -109,19 +152,20 @@
       <li>Dicas para oferecer seus serviços online com suporte da IA</li>
     </ul>
 
-    <h3 id="sobre">Sobre o Autor</h3>
-    <p>Caio é especialista em inteligência artificial aplicada ao trabalho digital. Com experiência em design, marketing e redação, ele mostra neste eBook como você pode usar IA para transformar sua carreira.</p>
+    <h3>Sobre o Autor</h3>
+    <p>Caio é especialista em inteligência artificial aplicada ao trabalho digital. Com experiência
+       em design, marketing e redação, ele mostra neste eBook como você pode usar IA para transformar sua carreira.</p>
   </section>
 
   <footer>
     <p>&copy; 2025 Canto do Design. Todos os direitos reservados.</p>
     <p>
-      <a href="#">Política de Privacidade</a> |
-      <a href="#">Termos de Uso</a> |
-      <a href="#">Contato</a>
+      <a href="privacidade.html">Política de Privacidade</a> |
+      <a href="termos.html">Termos de Uso</a> |
+      <a href="contato.html">Contato</a>
     </p>
-    <p>Este site oferece garantia de resultados. Os resultados variam de pessoa para pessoa.</p>
+    <p>Este site não oferece garantia de resultados. Os resultados variam de pessoa para pessoa.</p>
   </footer>
+
 </body>
 </html>
- 
