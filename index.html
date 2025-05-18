@@ -12,7 +12,11 @@
       font-family: 'Inter', sans-serif;
       background: #f8f9fa;
       color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
+
     header {
       background: #fff;
       padding: 1rem 2rem;
@@ -30,6 +34,7 @@
       text-decoration: none;
       color: #007bff;
     }
+
     .hero {
       text-align: center;
       padding: 4rem 2rem;
@@ -51,19 +56,33 @@
       font-weight: bold;
       border-radius: 8px;
     }
+
     .content {
       padding: 2rem;
       max-width: 800px;
       margin: 0 auto;
+      flex: 1;
     }
     .content h3 {
       margin-top: 2rem;
     }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    .image-container img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
     footer {
       background: #f1f1f1;
       text-align: center;
       padding: 1rem;
-      margin-top: 3rem;
       font-size: 0.9rem;
     }
     footer a {
@@ -73,29 +92,20 @@
     }
   </style>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-859096396">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-859096396');
-</script>
-  <!-- Event snippet for Visualização de página (1) conversion page -->
-<script>
-  gtag('event', 'conversion', {'send_to': 'AW-859096396/WZn5CIeZ5KgYEMyK05kD'});
-</script>
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-859096396"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-859096396');
+  </script>
+  <!-- Event snippet for Visualização de página -->
+  <script>
+    gtag('event', 'conversion', {'send_to': 'AW-859096396/WZn5CIeZ5KgYEMyK05kD'});
+  </script>
 </head>
-  <body>
-  <h1>Bem-vindo!</h1>
-  <img 
-    src="imagens/capa.jpg.jpg" 
-    alt="Como ganhar com IA" 
-    style="max-width:100%; height:auto;" 
-  />
-</body>
+
+<body>
   <header>
     <h1>Canto do Design</h1>
     <nav>
@@ -123,6 +133,14 @@
     <h3 id="sobre">Sobre o Autor</h3>
     <p>Caio é especialista em inteligência artificial aplicada ao trabalho digital. Com experiência em design, marketing e redação, ele mostra neste eBook como você pode usar IA para transformar sua carreira.</p>
   </section>
+
+  <!-- Imagem externa, posicionada abaixo e centralizada -->
+  <div class="image-container">
+    <img 
+      src="https://quilleconsultoria.com.br/wp-content/uploads/2023/07/Quille-Blog-Como-a-inteligencia-artificial-pode-impulsionar-sua-carreira-4.jpeg" 
+      alt="Exemplo de imagem online"
+    />
+  </div>
 
   <footer>
     <p>&copy; 2025 Canto do Design. Todos os direitos reservados.</p>
