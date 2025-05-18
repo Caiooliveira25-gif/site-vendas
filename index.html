@@ -58,31 +58,25 @@
     }
 
     .content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      align-items: center;
       padding: 2rem;
-      max-width: 1000px;
+      max-width: 800px;
       margin: 0 auto;
       flex: 1;
     }
-
-    .content .image-side,
-    .content .text-side {
-      flex: 1;
-      min-width: 280px;
+    .content h3 {
+      margin-top: 2rem;
     }
 
-    .content img {
-      width: 100%;
-      max-width: 100%;
+    .image-container {
+      display: flex;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    .image-container img {
+      max-width: 90%;
+      height: auto;
       border-radius: 8px;
       box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
-
-    .text-side h3 {
-      margin-top: 0;
     }
 
     footer {
@@ -129,24 +123,24 @@
   </section>
 
   <section class="content">
-    <div class="image-side">
-      <img 
-        src="https://sdmntpreastus.oaiusercontent.com/files/00000000-0c10-61f9-9a04-1cb2d6a3028e/raw?se=2025-05-18T04%3A27%3A36Z&sp=r&sv=2024-08-04&sr=b&scid=00000000-0000-0000-0000-000000000000&skoid=02b7f7b5-29f8-416a-aeb6-99464748559d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-18T00%3A30%3A53Z&ske=2025-05-19T00%3A30%3A53Z&sks=b&skv=2024-08-04&sig=/olSdlceapeQx6ZwuRsSTMfqnGIi6MhcThGckJTwbIE%3D" 
-        alt="Capa do eBook"
-      />
-    </div>
-    <div class="text-side">
-      <h3>O que você vai encontrar neste eBook:</h3>
-      <ul>
-        <li>Como aplicar IA em design, redação, marketing e outras áreas</li>
-        <li>Ferramentas práticas de IA para começar hoje</li>
-        <li>Dicas para oferecer seus serviços online com suporte da IA</li>
-      </ul>
+    <h3>O que você vai encontrar neste eBook:</h3>
+    <ul>
+      <li>Como aplicar IA em design, redação, marketing e outras áreas</li>
+      <li>Ferramentas práticas de IA para começar hoje</li>
+      <li>Dicas para oferecer seus serviços online com suporte da IA</li>
+    </ul>
 
-      <h3 id="sobre">Sobre o Autor</h3>
-      <p>Caio é especialista em inteligência artificial aplicada ao trabalho digital. Com experiência em design, marketing e redação, ele mostra neste eBook como você pode usar IA para transformar sua carreira.</p>
-    </div>
+    <h3 id="sobre">Sobre o Autor</h3>
+    <p>Caio é especialista em inteligência artificial aplicada ao trabalho digital. Com experiência em design, marketing e redação, ele mostra neste eBook como você pode usar IA para transformar sua carreira.</p>
   </section>
+
+  <!-- Imagem externa, posicionada abaixo e centralizada -->
+  <div class="image-container">
+    <img 
+      src="https://sdmntpreastus.oaiusercontent.com/files/00000000-0c10-61f9-9a04-1cb2d6a3028e/raw?se=2025-05-18T04%3A27%3A36Z&sp=r&sv=2024-08-04&sr=b&scid=00000000-0000-0000-0000-000000000000&skoid=02b7f7b5-29f8-416a-aeb6-99464748559d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-18T00%3A30%3A53Z&ske=2025-05-19T00%3A30%3A53Z&sks=b&skv=2024-08-04&sig=/olSdlceapeQx6ZwuRsSTMfqnGIi6MhcThGckJTwbIE%3D" 
+      alt="Exemplo de imagem online"
+    />
+  </div>
 
   <footer>
     <p>&copy; 2025 Canto do Design. Todos os direitos reservados.</p>
@@ -155,7 +149,7 @@
       <a href="#">Termos de Uso</a> |
       <a href="#">Contato</a>
     </p>
-    <p>Este site oferece garantia de resultados. Os resultados variam de pessoa para pessoa.</p>
+    <p>Este site oferece garantia de resultados. Os resultados variam de pessoa para pessoa. Após pagamento você receberá o e-book em até 1 hora no seu E-mail</p>
   </footer>
 </body>
 </html>
