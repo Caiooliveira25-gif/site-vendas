@@ -2,126 +2,156 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Baixe agora o eBook e aprenda como aplicar IA em qualquer profissão digital." />
   <title>eBook - Trabalhe Online com IA</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body, html {
+    body {
       margin: 0;
-      padding: 0;
       font-family: 'Inter', sans-serif;
       background: #f8f9fa;
       color: #333;
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
       background: #007bff;
       color: white;
-      padding: 1rem 2rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
+      padding: 1rem 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     header h1 {
       margin: 0;
-      font-weight: 700;
       font-size: 1.5rem;
     }
 
+    .menu-toggle {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.8rem;
+      cursor: pointer;
+      display: none;
+    }
+
     nav.topnav {
-      margin-top: 0.8rem;
+      margin-top: 0.5rem;
       display: flex;
-      gap: 1rem;
       flex-wrap: wrap;
+      gap: 1rem;
     }
 
     nav.topnav a {
-      background: rgba(255 255 255 / 0.25);
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
       color: white;
-      font-weight: 600;
+      font-weight: 500;
       text-decoration: none;
-      transition: background-color 0.3s ease;
-      white-space: nowrap;
-    }
-    nav.topnav a:hover,
-    nav.topnav a:focus {
-      background: rgba(255 255 255 / 0.5);
-      outline: none;
+      transition: opacity 0.3s ease;
     }
 
-    main.content {
-      max-width: 900px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.05);
-      flex: 1;
+    nav.topnav a:hover,
+    nav.topnav a:focus {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav.topnav {
+        flex-direction: column;
+        display: none;
+        gap: 0.8rem;
+        padding-top: 0.5rem;
+      }
+
+      nav.topnav.active {
+        display: flex;
+      }
     }
 
     .hero {
       text-align: center;
+      padding: 4rem 2rem;
       background: #e9ecef;
-      padding: 3rem 2rem 4rem;
-      border-radius: 8px;
-      margin-bottom: 2rem;
     }
+
     .hero h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
-      color: #222;
     }
+
     .hero p {
       font-size: 1.1rem;
-      margin-bottom: 1.8rem;
-      line-height: 1.6;
-      color: #333;
+      margin-bottom: 1.2rem;
     }
+
     .hero a {
       background: #28a745;
       color: white;
       padding: 1rem 2rem;
-      font-weight: 700;
-      border-radius: 8px;
       text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
       display: inline-block;
-      transition: background 0.3s ease;
-    }
-    .hero a:hover {
-      background: #218838;
+      margin-top: 1rem;
     }
 
-    section.content-section h3,
-    section.articles h3 {
-      color: #007bff;
-      border-bottom: 2px solid #007bff;
-      padding-bottom: 0.3rem;
+    .content {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      flex: 1;
+    }
+
+    .content h3 {
       margin-top: 2rem;
-      margin-bottom: 1rem;
-    }
-    section.articles article h4 {
-      color: #007bff;
-      margin-top: 1.5rem;
-      margin-bottom: 0.6rem;
     }
 
-    ul {
-      padding-left: 1.2rem;
-      margin-top: 0.5rem;
-      color: #444;
+    .articles {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 2rem;
     }
-    ul li {
-      margin-bottom: 0.6rem;
-      font-size: 1rem;
-      line-height: 1.4;
+
+    .articles h3 {
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      color: #222;
+    }
+
+    .articles ul {
+      list-style-type: disc;
+      padding-left: 1.2rem;
+    }
+
+    .articles ul li {
+      margin-bottom: 0.7rem;
+      font-size: 1.1rem;
+    }
+
+    .articles ul li a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .articles ul li a:hover {
+      text-decoration: underline;
     }
 
     .image-container {
@@ -129,6 +159,7 @@
       justify-content: center;
       margin: 2rem 0;
     }
+
     .image-container img {
       max-width: 90%;
       height: auto;
@@ -141,115 +172,92 @@
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
-      margin-top: 2rem;
     }
+
     footer a {
       margin: 0 0.5rem;
       color: #555;
       text-decoration: none;
     }
-
-    @media (max-width: 600px) {
-      nav.topnav {
-        justify-content: center;
-      }
-      main.content {
-        margin: 1rem;
-        padding: 1rem;
-      }
-      .hero h2 {
-        font-size: 1.6rem;
-      }
-    }
   </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-859096396"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-859096396');
+  </script>
+  <script>
+    gtag('event', 'conversion', {'send_to': 'AW-859096396/WZn5CIeZ5KgYEMyK05kD'});
+  </script>
 </head>
-<body>
 
+<body>
   <header>
-    <h1>Canto do Design</h1>
-    <nav class="topnav" aria-label="Menu principal">
-      <a href="#sobre">Sobre o Autor</a>
-      <a href="#ebook">O que você vai encontrar no eBook</a>
-      <a href="#artigo1">Como Designers Gráficos Podem Usar o ChatGPT</a>
-      <a href="#artigo2">5 Ferramentas de IA Para Profissionais Digitais</a>
-      <a href="#artigo3">Como a IA Está Transformando o Mercado de Trabalho Digital</a>
+    <div class="header-top">
+      <h1>Canto do Design</h1>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+    <nav class="topnav" id="topnav">
+      <a href="#sobre">Sobre</a>
+      <a href="#ebook">Conteúdo</a>
+      <a href="#artigo1">Design + IA</a>
+      <a href="#artigo2">Ferramentas IA</a>
+      <a href="#artigo3">Impacto no Mercado</a>
     </nav>
   </header>
 
-  <main class="content">
-    <section class="hero" id="ebook">
-      <h2>Descubra como usar a Inteligência Artificial para Trabalhar Online</h2>
-      <p>A Inteligência Artificial já está transformando o mercado de trabalho — e quem aprende a utilizá-la agora, sai na frente. Seja você um designer, redator, social media, programador ou empreendedor digital, este eBook vai te mostrar como aplicar ferramentas de IA para otimizar tarefas, aumentar a produtividade e criar soluções inovadoras no seu dia a dia profissional.
-      Com uma linguagem simples e direta, você vai descobrir os principais recursos, como utilizá-los estrategicamente e quais habilidades desenvolver para se destacar na nova era digital.
-      Não importa se você está começando do zero ou já atua na internet: este guia é o seu primeiro passo para trabalhar de forma mais inteligente, criativa e eficiente.
-      Baixe agora e transforme seu modo de trabalhar online com o poder do ChatGPT.</p>
-      <a href="https://pag.ae/7_F2wNges" target="_blank" rel="noopener noreferrer">Comprar eBook</a>
-    </section>
+  <section class="hero">
+    <h2>Descubra como usar a Inteligência Artificial para Trabalhar Online</h2>
+    <p>A Inteligência Artificial já está transformando o mercado de trabalho — e quem aprende a utilizá-la agora, sai na frente. Seja você um designer, redator, social media, programador ou empreendedor digital, este eBook vai te mostrar como aplicar ferramentas de IA para otimizar tarefas, aumentar a produtividade e criar soluções inovadoras no seu dia a dia profissional.</p>
+    <p>Com uma linguagem simples e direta, você vai descobrir os principais recursos, como utilizá-los estrategicamente e quais habilidades desenvolver para se destacar na nova era digital.</p>
+    <p>Não importa se você está começando do zero ou já atua na internet: este guia é o seu primeiro passo para trabalhar de forma mais inteligente, criativa e eficiente.</p>
+    <a href="https://pag.ae/7_F2wNges" target="_blank">Comprar eBook</a>
+  </section>
 
-    <section class="content-section" id="sobre">
-      <h3>Sobre o Autor</h3>
-      <p>Caio é especialista em inteligência artificial aplicada ao trabalho digital. Com experiência em design, marketing e redação, ele mostra neste eBook como você pode usar IA para transformar sua carreira.</p>
-    </section>
+  <section class="content" id="ebook">
+    <h3>O que você vai encontrar neste eBook:</h3>
+    <ul>
+      <li>Como aplicar ChatGPT em design, redação, marketing e outras áreas</li>
+      <li>Ferramentas práticas de IA para começar hoje</li>
+      <li>Dicas para oferecer seus serviços online com suporte da IA</li>
+    </ul>
 
-    <section class="articles" aria-label="Artigos Recentes">
-      <h3>Artigos Recentes</h3>
+    <h3 id="sobre">Sobre o Autor</h3>
+    <p>Caio é especialista em inteligência artificial aplicada ao trabalho digital. Com experiência em design, marketing e redação, ele mostra neste eBook como você pode usar IA para transformar sua carreira.</p>
+  </section>
 
-      <article id="artigo1">
-        <h4>Como Designers Gráficos Podem Usar o ChatGPT</h4>
-        <p>O ChatGPT é uma ferramenta poderosa para designers gráficos que desejam acelerar seu fluxo de trabalho e explorar novas ideias criativas. Com ele, você pode:</p>
-        <ul>
-          <li>Gerar sugestões de conceitos visuais e temas para projetos;</li>
-          <li>Escrever descrições e textos criativos para peças de design;</li>
-          <li>Criar roteiros para vídeos e apresentações;</li>
-          <li>Obter feedback instantâneo para aprimorar seus trabalhos;</li>
-          <li>Aprender sobre tendências e técnicas de design atualizadas.</li>
-        </ul>
-        <p>Usar o ChatGPT ao lado de softwares tradicionais pode transformar sua rotina e abrir espaço para inovação.</p>
-      </article>
+  <section class="articles">
+    <h3>Artigos Recentes</h3>
+    <ul>
+      <li id="artigo1"><a href="como-usar-chatgpt-como-designer.html">Como Designers Gráficos Podem Usar o ChatGPT</a></li>
+      <li id="artigo2"><a href="ferramentas-de-ia-para-profissionais-digitais.html">5 Ferramentas de IA Para Profissionais Digitais</a></li>
+      <li id="artigo3"><a href="como-a-ia-esta-mudando-o-mercado.html">Como a IA Está Transformando o Mercado de Trabalho Digital</a></li>
+    </ul>
+  </section>
 
-      <article id="artigo2">
-        <h4>5 Ferramentas de IA Para Profissionais Digitais</h4>
-        <p>Confira algumas ferramentas de inteligência artificial que você pode começar a usar hoje para aumentar sua produtividade e qualidade do trabalho online:</p>
-        <ul>
-          <li><strong>ChatGPT:</strong> Assistente de texto para criação, revisão e ideias.</li>
-          <li><strong>Canva com IA:</strong> Ferramenta de design com recursos automáticos.</li>
-          <li><strong>Jasper AI:</strong> Criação de conteúdo para marketing e redes sociais.</li>
-          <li><strong>Grammarly:</strong> Correção gramatical e estilo para textos.</li>
-          <li><strong>DALL·E 2:</strong> Criação de imagens a partir de descrições textuais.</li>
-        </ul>
-        <p>Integrar essas ferramentas ao seu fluxo de trabalho digital pode otimizar suas entregas e trazer mais inovação.</p>
-      </article>
-
-      <article id="artigo3">
-        <h4>Como a IA Está Transformando o Mercado de Trabalho Digital</h4>
-        <p>A inteligência artificial está revolucionando o mercado digital, trazendo mudanças significativas nas profissões e na forma como trabalhamos:</p>
-        <ul>
-          <li><strong>Automação de tarefas repetitivas:</strong> Liberando tempo para atividades estratégicas.</li>
-          <li><strong>Criação de conteúdo inteligente:</strong> Textos, imagens e vídeos gerados rapidamente.</li>
-          <li><strong>Melhoria na tomada de decisões:</strong> Análises de dados mais precisas.</li>
-          <li><strong>Novos modelos de negócios:</strong> Serviços e produtos baseados em IA.</li>
-          <li><strong>Demandas por habilidades digitais:</strong> Capacitação constante para se manter relevante.</li>
-        </ul>
-        <p>Adaptar-se a essas mudanças é fundamental para quem quer se destacar no mercado digital atual.</p>
-      </article>
-    </section>
-
-    <div class="image-container">
-      <img 
-        src="https://fcamara.com/blog/wp-content/uploads/2024/11/tipos-de-inteligencia-artificial-FCamara-1.jpg" 
-        alt="Exemplo de imagem online"
-      />
-    </div>
-  </main>
+  <div class="image-container">
+    <img 
+      src="https://fcamara.com/blog/wp-content/uploads/2024/11/tipos-de-inteligencia-artificial-FCamara-1.jpg" 
+      alt="Exemplo de imagem online"
+    />
+  </div>
 
   <footer>
-    <p>© 2025 Canto do Design. Todos os direitos reservados.</p>
+    <p>&copy; 2025 Canto do Design. Todos os direitos reservados.</p>
     <p>
-      <a href="#privacidade">Política de Privacidade</a> |
-      <a href="#termos">Termos de Uso</a> |
-      <a href="#contato">Contato</a>
+      <a href="privacidade">Política de Privacidade</a> |
+      <a href="termos">Termos de Uso</a> |
+      <a href="contato">Contato</a>
     </p>
+    <p>Este site oferece garantia de resultados. Os resultados variam de pessoa para pessoa. Após pagamento você receberá o e-book em até 1 hora no seu E-mail.</p>
   </footer>
 
+  <script>
+    function toggleMenu() {
+      document.getElementById('topnav').classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
